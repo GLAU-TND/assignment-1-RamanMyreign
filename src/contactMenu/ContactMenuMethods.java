@@ -107,7 +107,19 @@ public class ContactMenuMethods {
 
     }
 
+    public void deleteContact() {
+        System.out.println("Here are all your contacts: ");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println((i + 1) + ". " + list.get(i).getName() + " " + list.get(i).getLastName());
+        }
+        System.out.println("Press the number against the contact to delete it:");
+        Scanner scan = new Scanner(System.in);
+        int delete = scan.nextInt();
 
+        System.out.println(list.get(delete - 1).getName() + "'s contact deleted from list!");
+        list.remove(delete - 1);
+
+    }
 
 
 
