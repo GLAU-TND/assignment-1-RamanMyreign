@@ -17,9 +17,30 @@ public class Main {
         boolean n = true;
         ContactMenuMethods obj = new ContactMenuMethods(); // creating object of ContactMenuMethod class
 
+        while (n) {
+            int option = Integer.parseInt(scan.nextLine());
 
 
+            switch (option) {
+                case 1:
+                    obj.addContact();
+                    break;
+                case 2:
+                    obj.viewContact();
+                    break;
+                case 3:
+                    obj.searchContact();
+                    break;
+                case 4:
+                    obj.deleteContact();
+                    break;
+                case 5:
+                    n = false;
+                    System.out.println("get terminated");
+                    break;
 
 
+            }
+        }
     }
 }
